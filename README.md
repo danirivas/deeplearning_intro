@@ -1,3 +1,7 @@
+# Where to start?
+
+- A Beginner's Guide To Understanding Convolutional Neural Networks. [[Part1]](https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/) [[Part2]](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/)
+
 # Concepts
 - Ablation Study [[1]](http://qingkaikong.blogspot.com/2017/12/what-is-ablation-study-in-machine.html) [[2]](https://www.quora.com/In-the-context-of-deep-learning-what-is-an-ablation-study)
 - The Vanishing Gradient Problem [[1]](https://towardsdatascience.com/the-vanishing-gradient-problem-69bf08b15484)
@@ -10,6 +14,39 @@
 - Backpropagation [[Video]](https://www.youtube.com/watch?v=Ilg3gGewQ5U) 
 ..- Calculus of backpropagation [[Video]](https://www.youtube.com/watch?v=tIeHLnjs5U8)
 
+
+## Layers
+
+### Activation Functions
+
+- ReLU: Rectified Linear Units Improve Restricted Boltzmann Machines (2010) [[paper]](http://www.cs.toronto.edu/~fritz/absps/reluICML.pdf)
+
+```
+[...]After some ReLU layers, programmers may choose to apply a pooling layer. It is also referred to as a downsampling layer. In this category, there are also several layer options, with maxpooling being the most popular. This basically takes a filter (normally of size 2x2) and a stride of the same length. It then applies it to the input volume and outputs the maximum number in every subregion that the filter convolves around.
+```
+(https://adeshpande3.github.io/assets/MaxPool.png "Example of MaxPool")
+[[source]](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/)
+
+```
+ The intuitive reasoning behind this layer is that once we know that a specific feature is in the original input volume (there will be a high activation value), its exact location is not as important as its relative location to the other features. As you can imagine, this layer drastically reduces the spatial dimension (the length and the width change but not the depth) of the input volume. This serves two main purposes. The first is that the amount of parameters or weights is reduced by 75%, thus lessening the computation cost. The second is that it will control overfitting.
+```
+
+### Dropout
+
+```
+The idea of dropout is simplistic in nature. This layer “drops out” a random set of activations in that layer by setting them to zero. Simple as that. Now, what are the benefits of such a simple and seemingly unnecessary and counterintuitive process? Well, in a way, it forces the network to be redundant. By that I mean the network should be able to provide the right classification or output for a specific example even if some of the activations are dropped out. It makes sure that the network isn’t getting too “fitted” to the training data and thus helps alleviate the overfitting problem. An important note is that this layer is only used during training, and not during test time.
+```
+[[source]](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/)
+
+See also: *Dropout: A Simple Way to Prevent Neural Networks from Overfitting* (2014) [[paper]](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf))
+
+### Network In Network Layer
+
+```
+A network in network layer refers to a conv layer where a 1 x 1 size filter is used. Now, at first look, you might wonder why this type of layer would even be helpful since receptive fields are normally larger than the space they map to. However, we must remember that these 1x1 convolutions span a certain depth, so we can think of it as a 1 x 1 x N convolution where N is the number of filters applied in the layer. Effectively, this layer is performing a N-D element-wise multiplication where N is the depth of the input volume into the layer.
+```
+
+See also: *Network In Network* by Min Li. [[arxiv.org]](https://arxiv.org/pdf/1312.4400v3.pdf)
 
 # Deep Learning
 
@@ -49,15 +86,31 @@ The same authors revise [[here]](https://arxiv.org/pdf/1605.07678.pdf) the diffe
 - YOLO9000, a.k.a. YOLOv2 (2016) [[Paper]](https://arxiv.org/pdf/1612.08242.pdf)
 - YOLOv3 (2018) [[Paper]](https://arxiv.org/pdf/1804.02767.pdf)
 
-#### Datasets
+## Datasets
 - PASCAL Visual Object Classification (PASCAL VOC) [[link]](http://host.robots.ox.ac.uk/pascal/VOC/)
 - Common Objects in COntext (COCO)
+
+## Architectures
+
+- Network In Network (2013) [[arxiv.org]](https://arxiv.org/pdf/1312.4400.pdf)
+- Inception (2014) [[arxiv.org]](https://arxiv.org/pdf/1409.4842.pdf)
+
 
 ## Generative Adversial Networks
 
 - Introduction [[link]](https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29)
 - First paper "Generative Adversarial Networks" in 2014 [[Paper]](https://arxiv.org/pdf/1406.2661.pdf)
 
+
+# Visualization and Representation of Neural Networks
+
+- *Visualizing and Understanding Convolutional Networks* (2013) [[arxiv.org]](https://arxiv.org/pdf/1311.2901.pdf)
+- *Deep Neural Networks are Easily Fooled: High Confidence Predictions for Unrecognizable Images* (2015) [[CV Foundation]](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Nguyen_Deep_Neural_Networks_2015_CVPR_paper.pdf)
+- *Understanding Neural Networks Through Deep Visualization* (2015) [[arxiv.org]](https://arxiv.org/pdf/1311.2901.pdf) [[website]](http://yosinski.com/deepvis) [[code]](https://github.com/yosinski/deep-visualization-toolbox) [[video]](https://youtu.be/AgkfIQ4IGaM)
+
+- Inceptionism: *Going Deeper into Neural Networks* [[Google AI Blog]](https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html) 
+
+- *How computers are learning to be creative*, by Blaise Agüera y Arcas [[video]](https://www.youtube.com/watch?v=uSUOdu_5MPc)
 
 # Programming
 
@@ -66,9 +119,18 @@ The same authors revise [[here]](https://arxiv.org/pdf/1605.07678.pdf) the diffe
 - PyTorch (Facebook)
 - OpenVINO (Intel, only inference)
 
+- [OpenAI Gym](https://gym.openai.com). A toolkit for developing and comparing reinforcement learning algorithms.
+- [OpenAI Universe](https://openai.com/blog/universe/). "With Universe, any program can be turned into a Gym environment."
+
+
 ## Tutorials
 
 - Getting Started with TensorFlow and Deep Learning, from ScyPy 2018 by Josh Gordon (Google) [[link]](https://www.youtube.com/watch?v=tYYVSEHq-io&t=709s)
+
+## Courses
+
+- [fast.ai](https://www.fast.ai/) - [Course Overview](https://towardsdatascience.com/simplifying-deep-learning-with-fast-ai-37aa0d321f5e)
+- [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - Google
 
 
 # Other interesting links
@@ -96,4 +158,6 @@ It's very common to call the fit model just a model. I try to use my words preci
 ```
 [[link to stackoverflow answer]](https://stats.stackexchange.com/a/291482)
 
+# TODO:
 
+- IMPORTANT: Use proper citation style.
