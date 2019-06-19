@@ -127,10 +127,15 @@ The same authors revise [[here]](https://arxiv.org/pdf/1605.07678.pdf) the diffe
 
 - Getting Started with TensorFlow and Deep Learning, from ScyPy 2018 by Josh Gordon (Google) [[link]](https://www.youtube.com/watch?v=tYYVSEHq-io&t=709s)
 
-## Courses
+
+# Courses
 
 - [fast.ai](https://www.fast.ai/) - [Course Overview](https://towardsdatascience.com/simplifying-deep-learning-with-fast-ai-37aa0d321f5e)
 - [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - Google
+
+# Books
+
+- [deeplearningbook.org](https://deeplearningbook.org)
 
 
 # Other interesting links
