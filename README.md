@@ -75,28 +75,35 @@ Review of Deep Learning Algorithms for Image Classification. [[1]](https://mediu
 ### Object Detection
 
 Review of Deep Learning Algorithms for Object Detection. [[1]](https://medium.com/zylapp/review-of-deep-learning-algorithms-for-object-detection-c1f3d437b852)
+
 Performance analysis (speed and accuracy) comparison between different object detection architectures. [[1]](https://medium.com/@jonathan_hui/object-detection-speed-and-accuracy-comparison-faster-r-cnn-r-fcn-ssd-and-yolo-5425656ae359)
 
 - YOLO (2016) [[Paper]](https://arxiv.org/pdf/1506.02640.pdf)
 - YOLO9000, a.k.a. YOLOv2 (2016) [[Paper]](https://arxiv.org/pdf/1612.08242.pdf)
+- Single Shot Detector (2016). Also known as SSD. [[paper]](https://arxiv.org/abs/1512.02325) [[review]](https://towardsdatascience.com/review-ssd-single-shot-detector-object-detection-851a94607d11)
 - YOLOv3 (2018) [[Paper]](https://arxiv.org/pdf/1804.02767.pdf)
 
-- *Real-time Object Detection with YOLO, YOLOv2 and now YOLOv3
+- *Real-time Object Detection with YOLO, YOLOv2 and now YOLOv3* [[link]](https://medium.com/@jonathan_hui/real-time-object-detection-with-yolo-yolov2-28b1b93e2088)
+- *SSD object detection: Single Shot MultiBox Detector for real-time processing* [[link]](https://medium.com/@jonathan_hui/ssd-object-detection-single-shot-multibox-detector-for-real-time-processing-9bd8deac0e06)
 
-- Single Shot Detector (2016). Also known as SSD. [[paper]](https://arxiv.org/abs/1512.02325) [[review]](https://towardsdatascience.com/review-ssd-single-shot-detector-object-detection-851a94607d11)
 
 *What do we learn from region-based object detectors (Faster R-CNN, R-FCN, FPN)?* [[Part 1]](https://medium.com/@jonathan_hui/what-do-we-learn-from-region-based-object-detectors-faster-r-cnn-r-fcn-fpn-7e354377a7c9)
-*What do we learn from single shot object detectors (SSD, YOLOv3), FPN & Focal loss (RetinaNet)? [[Part 2]](https://medium.com/@jonathan_hui/what-do-we-learn-from-single-shot-object-detectors-ssd-yolo-fpn-focal-loss-3888677c5f4d)
+
+*What do we learn from single shot object detectors (SSD, YOLOv3), FPN & Focal loss (RetinaNet)?* [[Part 2]](https://medium.com/@jonathan_hui/what-do-we-learn-from-single-shot-object-detectors-ssd-yolo-fpn-focal-loss-3888677c5f4d)
 
 #### Segmentation
 
+##### Semantic Segmentation
+- FCN - Fully Convolutional Network (2014). [[paper]](https://arxiv.org/abs/1411.4038) [[review]](https://towardsdatascience.com/review-fcn-semantic-segmentation-eb8c9b50d2d1)
+- *How to do Semantic Segmentation using Deep learning* [[link]](https://medium.com/nanonets/how-to-do-image-segmentation-using-deep-learning-c673cc5862ef)
+
 ##### Instance Segmentation
 - DeepMask [[Paper]](https://arxiv.org/abs/1506.06204) [[Review]](https://towardsdatascience.com/review-deepmask-instance-segmentation-30327a072339) [[Demo]](https://www.youtube.com/watch?v=Lbzgh6NkMMw)
-##### Semantic Segmentation
-
 ## Datasets
 - PASCAL Visual Object Classification (PASCAL VOC) [[link]](http://host.robots.ox.ac.uk/pascal/VOC/)
-- Common Objects in COntext (COCO)
+- Common Objects in COntext (COCO) [[link]](http://cocodataset.org/)
+- Cityscapes Dataset - Semantic Understanding of Urban Street Scenes. [[link]](https://www.cityscapes-dataset.com/)
+- Labeled Faces in the Wild. Dataset for face detection. [[link]](http://vis-www.cs.umass.edu/lfw/)
 
 ## Architectures
 
