@@ -8,11 +8,11 @@
 
 # Basics
 
-...Basic concepts to start with Deep Learning, before delving into the state-of-the-art 
+Basic concepts to start with Deep Learning, before delving into the state-of-the-art 
 - Neural Network [[Video]](https://www.youtube.com/watch?v=aircAruvnKk)
 - Gradient Descent [[Video]](https://www.youtube.com/watch?v=IHZwWFHWa-w) [[1]](https://ml-cheatsheet.readthedocs.io/en/latest/gradient_descent.html)
 - Backpropagation [[Video]](https://www.youtube.com/watch?v=Ilg3gGewQ5U) 
-..- Calculus of backpropagation [[Video]](https://www.youtube.com/watch?v=tIeHLnjs5U8)
+- Calculus of backpropagation [[Video]](https://www.youtube.com/watch?v=tIeHLnjs5U8)
 
 
 ## Layers
@@ -61,30 +61,38 @@ See also: *Network In Network* by Min Li. [[arxiv.org]](https://arxiv.org/pdf/13
 The same authors revise [[here]](https://arxiv.org/pdf/1605.07678.pdf) the different architectures for practical applications.
 
 
-...Within each category, models are ordered chronologically.
+Within each category, models are ordered chronologically.
 
 ### Image Classification
 
-...Review of Deep Learning Algorithms for Image Classification. [[1]](https://medium.com/zylapp/review-of-deep-learning-algorithms-for-image-classification-5fdbca4a05e2)
+Review of Deep Learning Algorithms for Image Classification. [[1]](https://medium.com/zylapp/review-of-deep-learning-algorithms-for-image-classification-5fdbca4a05e2)
 
 - AlexNet (2012) [[Paper]](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
 - VGGNet (2015) [[Paper]](https://arxiv.org/pdf/1409.1556.pdf) [Review](https://medium.com/coinmonks/paper-review-of-vggnet-1st-runner-up-of-ilsvlc-2014-image-classification-d02355543a11) 
 - ResNet (2015) [[Paper]](https://arxiv.org/pdf/1512.03385)
 - Squeezenet (2016) [[Paper]](https://arxiv.org/pdf/1602.07360.pdf) [[github]](https://github.com/DeepScale/SqueezeNet)
 
-### Segmentation
-
-- Instance Segmentation:
-..- DeepMask [[Paper]](https://arxiv.org/abs/1506.06204) [[Review]](https://towardsdatascience.com/review-deepmask-instance-segmentation-30327a072339) [[Demo]](https://www.youtube.com/watch?v=Lbzgh6NkMMw)
-- Semantic Segmentation
-
 ### Object Detection
 
-...Review of Deep Learning Algorithms for Object Detection. [[1]](https://medium.com/zylapp/review-of-deep-learning-algorithms-for-object-detection-c1f3d437b852)
+Review of Deep Learning Algorithms for Object Detection. [[1]](https://medium.com/zylapp/review-of-deep-learning-algorithms-for-object-detection-c1f3d437b852)
+Performance analysis (speed and accuracy) comparison between different object detection architectures. [[1]](https://medium.com/@jonathan_hui/object-detection-speed-and-accuracy-comparison-faster-r-cnn-r-fcn-ssd-and-yolo-5425656ae359)
 
 - YOLO (2016) [[Paper]](https://arxiv.org/pdf/1506.02640.pdf)
 - YOLO9000, a.k.a. YOLOv2 (2016) [[Paper]](https://arxiv.org/pdf/1612.08242.pdf)
 - YOLOv3 (2018) [[Paper]](https://arxiv.org/pdf/1804.02767.pdf)
+
+- *Real-time Object Detection with YOLO, YOLOv2 and now YOLOv3
+
+- Single Shot Detector (2016). Also known as SSD. [[paper]](https://arxiv.org/abs/1512.02325) [[review]](https://towardsdatascience.com/review-ssd-single-shot-detector-object-detection-851a94607d11)
+
+*What do we learn from region-based object detectors (Faster R-CNN, R-FCN, FPN)?* [[Part 1]](https://medium.com/@jonathan_hui/what-do-we-learn-from-region-based-object-detectors-faster-r-cnn-r-fcn-fpn-7e354377a7c9)
+*What do we learn from single shot object detectors (SSD, YOLOv3), FPN & Focal loss (RetinaNet)? [[Part 2]](https://medium.com/@jonathan_hui/what-do-we-learn-from-single-shot-object-detectors-ssd-yolo-fpn-focal-loss-3888677c5f4d)
+
+#### Segmentation
+
+##### Instance Segmentation
+- DeepMask [[Paper]](https://arxiv.org/abs/1506.06204) [[Review]](https://towardsdatascience.com/review-deepmask-instance-segmentation-30327a072339) [[Demo]](https://www.youtube.com/watch?v=Lbzgh6NkMMw)
+##### Semantic Segmentation
 
 ## Datasets
 - PASCAL Visual Object Classification (PASCAL VOC) [[link]](http://host.robots.ox.ac.uk/pascal/VOC/)
@@ -100,6 +108,8 @@ The same authors revise [[here]](https://arxiv.org/pdf/1605.07678.pdf) the diffe
 
 - Introduction [[link]](https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29)
 - First paper "Generative Adversarial Networks" in 2014 [[Paper]](https://arxiv.org/pdf/1406.2661.pdf)
+
+- *How deep learning fakes videos (Deepfake) and how to detect it?* [[link]](https://medium.com/@jonathan_hui/how-deep-learning-fakes-videos-deepfakes-and-how-to-detect-it-c0b50fbf7cb9)
 
 
 # Visualization and Representation of Neural Networks
@@ -140,12 +150,15 @@ The same authors revise [[here]](https://arxiv.org/pdf/1605.07678.pdf) the diffe
 
 # Other interesting links
 
+- *How computers are learning to be creative* by Blaise Agüera y Arcas. [[video]](https://www.youtube.com/watch?v=uSUOdu_5MPc)
 - *What happens when our computers get smarter than we are?* by Nick Bostrom. [[video]](https://www.youtube.com/watch?v=MnT1xgZgkpk)
 - *Can we build AI without losing control over it?* by Sam Harris. [[video]](https://www.youtube.com/watch?v=8nt3edWLgIg)
+- *How computers learn to recognize objects instantly* by Joseph Redmon (YOLO Team). [[video]](https://www.youtube.com/watch?v=Cgxsv1riJhI)
+- *The incredible inventions of intuitive AI* by Maurice Conti. [[video]](https://www.youtube.com/watch?v=aR5N2Jl8k14)
 
 ## Interesting YouTube Channels:
 - Two Minute Papers. [[link]](https://www.youtube.com/user/keeroyz/)
-
+- DotCSV (in Spanish) [[link]](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg)
 
 # Terminology
 
