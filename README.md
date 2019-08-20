@@ -1,8 +1,12 @@
 # Before starting
 ```
-All sources linked here (books, papers, courses, etc.) are freely accessible. It could be that some sources are only accessible upon sign up (Coursera courses, for example) but I'll avoid those if possible. However, none will require a registration fee.
+All sources linked here (books, papers, courses, etc.) are freely accessible. 
+It could be that some sources are only accessible upon sign up (Coursera courses, for example) 
+but I'll avoid those if possible. However, none will require a registration fee.
 
-Also notice, many articles are hosted in Medium, which has a monthly limit of articles that can be accesses. However, this limitation can be easily bypassed by using *Private Browsing*, such as *Incognito Mode* in Google Chrome or *Private Window* in Firefox.
+Also notice, many articles are hosted in Medium, which has a monthly limit of articles that can 
+be accesses. However, this limitation can be easily bypassed by using *Private Browsing*, 
+such as *Incognito Mode* in Google Chrome or *Private Window* in Firefox.
 ```
 
 # Where to start?
@@ -29,19 +33,36 @@ Basic concepts to start with Deep Learning, before delving into the state-of-the
 - ReLU: Rectified Linear Units Improve Restricted Boltzmann Machines (2010) [[paper]](http://www.cs.toronto.edu/~fritz/absps/reluICML.pdf)
 
 ```
-[...]After some ReLU layers, programmers may choose to apply a pooling layer. It is also referred to as a downsampling layer. In this category, there are also several layer options, with maxpooling being the most popular. This basically takes a filter (normally of size 2x2) and a stride of the same length. It then applies it to the input volume and outputs the maximum number in every subregion that the filter convolves around.
+[...]After some ReLU layers, programmers may choose to apply a pooling layer. 
+It is also referred to as a downsampling layer. In this category, there are also several 
+layer options, with maxpooling being the most popular. This basically takes a filter 
+(normally of size 2x2) and a stride of the same length. It then applies it to the input 
+volume and outputs the maximum number in every subregion that the filter convolves around.
 ```
 (https://adeshpande3.github.io/assets/MaxPool.png "Example of MaxPool")
 [[source]](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/)
 
 ```
- The intuitive reasoning behind this layer is that once we know that a specific feature is in the original input volume (there will be a high activation value), its exact location is not as important as its relative location to the other features. As you can imagine, this layer drastically reduces the spatial dimension (the length and the width change but not the depth) of the input volume. This serves two main purposes. The first is that the amount of parameters or weights is reduced by 75%, thus lessening the computation cost. The second is that it will control overfitting.
+ The intuitive reasoning behind this layer is that once we know that a specific feature 
+ is in the original input volume (there will be a high activation value), its exact location 
+ is not as important as its relative location to the other features. As you can imagine, 
+ this layer drastically reduces the spatial dimension (the length and the width change 
+ but not the depth) of the input volume. This serves two main purposes. The first is 
+ that the amount of parameters or weights is reduced by 75%, thus lessening the computation cost. 
+ The second is that it will control overfitting.
 ```
 
 ### Dropout
 
 ```
-The idea of dropout is simplistic in nature. This layer “drops out” a random set of activations in that layer by setting them to zero. Simple as that. Now, what are the benefits of such a simple and seemingly unnecessary and counterintuitive process? Well, in a way, it forces the network to be redundant. By that I mean the network should be able to provide the right classification or output for a specific example even if some of the activations are dropped out. It makes sure that the network isn’t getting too “fitted” to the training data and thus helps alleviate the overfitting problem. An important note is that this layer is only used during training, and not during test time.
+The idea of dropout is simplistic in nature. This layer “drops out” a random set of activations 
+in that layer by setting them to zero. Simple as that. Now, what are the benefits of such a simple 
+and seemingly unnecessary and counterintuitive process? Well, in a way, it forces the network 
+to be redundant. By that I mean the network should be able to provide the right classification 
+or output for a specific example even if some of the activations are dropped out. It makes sure 
+that the network isn’t getting too “fitted” to the training data and thus helps alleviate the 
+overfitting problem. An important note is that this layer is only used during training, and not 
+during test time.
 ```
 [[source]](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/)
 
@@ -50,7 +71,12 @@ See also: *Dropout: A Simple Way to Prevent Neural Networks from Overfitting* (2
 ### Network In Network Layer
 
 ```
-A network in network layer refers to a conv layer where a 1 x 1 size filter is used. Now, at first look, you might wonder why this type of layer would even be helpful since receptive fields are normally larger than the space they map to. However, we must remember that these 1x1 convolutions span a certain depth, so we can think of it as a 1 x 1 x N convolution where N is the number of filters applied in the layer. Effectively, this layer is performing a N-D element-wise multiplication where N is the depth of the input volume into the layer.
+A network in network layer refers to a conv layer where a 1 x 1 size filter is used. Now, 
+at first look, you might wonder why this type of layer would even be helpful since receptive 
+fields are normally larger than the space they map to. However, we must remember that these 
+1x1 convolutions span a certain depth, so we can think of it as a 1 x 1 x N convolution where 
+N is the number of filters applied in the layer. Effectively, this layer is performing a N-D 
+element-wise multiplication where N is the depth of the input volume into the layer.
 ```
 
 See also: *Network In Network* by Min Li. [[arxiv.org]](https://arxiv.org/pdf/1312.4400v3.pdf)
@@ -210,12 +236,16 @@ In Spanish but with English captions. The author has different types of videos: 
 This terminology is often abused, but the pedantic view is:
 
 A model would be a network architecture with all it's weights viewed as free parameters.
-A fit model is a network with fixed weights determined by running a fitting algorithm with some training data.
-Parameters map out the various specific shapes that the model can obtain, fitting chooses specific values of the weights that best reflect the training data.
-Hyperparameters control the behaviour of the fitting algorithm, they are often set to find the parameters that offer the best performance according to some estimate of hold-out error.
+A fit model is a network with fixed weights determined by running a fitting algorithm with 
+some training data.
+Parameters map out the various specific shapes that the model can obtain, fitting chooses 
+specific values of the weights that best reflect the training data.
+Hyperparameters control the behaviour of the fitting algorithm, they are often set to find 
+the parameters that offer the best performance according to some estimate of hold-out error.
 I settled on this terminology after reading Wasserman's All of Statistics.
 
-It's very common to call the fit model just a model. I try to use my words precisely and consistently, especially when talking to students, but it is hard to avoid sometimes!
+It's very common to call the fit model just a model. I try to use my words precisely and 
+consistently, especially when talking to students, but it is hard to avoid sometimes!
 ```
 [[link to stackoverflow answer]](https://stats.stackexchange.com/a/291482)
 
