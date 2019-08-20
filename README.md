@@ -1,3 +1,10 @@
+# Before starting
+```
+All sources linked here (books, papers, courses, etc.) are freely accessible. It could be that some sources are only accessible upon sign up (Coursera courses, for example) but I'll avoid those if possible. However, none will require a registration fee.
+
+Also notice, many articles are hosted in Medium, which has a monthly limit of articles that can be accesses. However, this limitation can be easily bypassed by using *Private Browsing*, such as *Incognito Mode* in Google Chrome or *Private Window* in Firefox.
+```
+
 # Where to start?
 
 - A Beginner's Guide To Understanding Convolutional Neural Networks. [[Part1]](https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/) [[Part2]](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/)
@@ -10,7 +17,7 @@
 
 Basic concepts to start with Deep Learning, before delving into the state-of-the-art 
 - Neural Network [[Video]](https://www.youtube.com/watch?v=aircAruvnKk)
-- Gradient Descent [[Video]](https://www.youtube.com/watch?v=IHZwWFHWa-w) [[1]](https://ml-cheatsheet.readthedocs.io/en/latest/gradient_descent.html)
+- Gradient Descent [[Video]](https://www.youtube.com/watch?v=IHZwWFHWa-w) [[Understanding the Mathematics behind Gradient Descent]](https://towardsdatascience.com/understanding-the-mathematics-behind-gradient-descent-dde5dc9be06e) [[ML Cheatseet Documentation]](https://ml-cheatsheet.readthedocs.io/en/latest/gradient_descent.html) 
 - Backpropagation [[Video]](https://www.youtube.com/watch?v=Ilg3gGewQ5U) 
 - Calculus of backpropagation [[Video]](https://www.youtube.com/watch?v=tIeHLnjs5U8)
 
@@ -119,6 +126,20 @@ Performance analysis (speed and accuracy) comparison between different object de
 - *How deep learning fakes videos (Deepfake) and how to detect it?* [[link]](https://medium.com/@jonathan_hui/how-deep-learning-fakes-videos-deepfakes-and-how-to-detect-it-c0b50fbf7cb9)
 
 
+
+# Training
+
+## Optimization Algorithms
+
+- Gradient Descent [[Video]](https://www.youtube.com/watch?v=IHZwWFHWa-w) [[Understanding the Mathematics behind Gradient Descent]](https://towardsdatascience.com/understanding-the-mathematics-behind-gradient-descent-dde5dc9be06e) [[ML Cheatseet Documentation]](https://ml-cheatsheet.readthedocs.io/en/latest/gradient_descent.html) 
+- Adaptive Gradient Algorithm (AdaGrad): maintains a per-parameter learning rate that improves performance on problems with sparse gradients (e.g. natural language and computer vision problems).
+- Root Mean Square Propagation (RMSProp): also maintains per-parameter learning rates that are adapted based on the average of recent magnitudes of the gradients for the weight (e.g. how quickly it is changing). This means the algorithm does well on online and non-stationary problems (e.g. noisy).
+- Adaptive Moment Estimation (Adam): A learning rate is maintained for each network weight (parameter) and separately adapted as learning unfolds. *"The method computes individual adaptive learning rates for different parameters from estimates of first and second moments of the gradients."* The authors describe Adam as combining the advantages of AdaGrad and RMSProp. [[deeplearning.ai lecture on Adam]](https://www.youtube.com/watch?v=JXQT_vxqwIs) [[Gentle Introduction to the Adam Optimization Algorithm for Deep Learning]](https://machinelearningmastery.com/adam-optimization-algorithm-for-deep-learning/)
+
+- *The Evolution of Gradient Descent* by Siraj Raval [[video]](https://www.youtube.com/watch?v=nhqo0u1a6fw) *"Adam usually outperforms the rest [...] followed very closely by AdaGrad and AdaDelta [...] [other optimization algorithms] when data is sparse, they don't perform well"*
+- An overview of gradient descent optimization algorithms (2016) [[paper]](https://arxiv.org/abs/1609.04747)
+
+
 # Visualization and Representation of Neural Networks
 
 - *Visualizing and Understanding Convolutional Networks* (2013) [[arxiv.org]](https://arxiv.org/pdf/1311.2901.pdf)
@@ -128,6 +149,7 @@ Performance analysis (speed and accuracy) comparison between different object de
 - Inceptionism: *Going Deeper into Neural Networks* [[Google AI Blog]](https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html) 
 
 - *How computers are learning to be creative*, by Blaise Agüera y Arcas [[video]](https://www.youtube.com/watch?v=uSUOdu_5MPc)
+
 
 # Programming
 
@@ -148,6 +170,7 @@ Performance analysis (speed and accuracy) comparison between different object de
 # Courses
 
 - [fast.ai](https://www.fast.ai/) - [Course Overview](https://towardsdatascience.com/simplifying-deep-learning-with-fast-ai-37aa0d321f5e)
+- [deeplearning.ai](https://www.deeplearning.ai/deep-learning-specialization/) by Andrew Ng. Offers a 5-course Deep Learning Specialization (plus a Tensorflow Specialization and an *AI For Everyone* course). [[Thoughts after taking the Deeplearning.ai courses]](https://towardsdatascience.com/thoughts-after-taking-the-deeplearning-ai-courses-8568f132153)
 - [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - Google
 
 # Books
@@ -155,17 +178,30 @@ Performance analysis (speed and accuracy) comparison between different object de
 - [deeplearningbook.org](https://deeplearningbook.org)
 
 
-# Other interesting links
+# Other interesting resources
+
+## YouTube Channels
+
+- Two Minute Papers. [[link]](https://www.youtube.com/user/keeroyz/)
+Short videos (not exactly two minutes, but 2 to 5 minutes regularly) presenting interesting and novel papers in the field of computer science. Most of them are related to Deep Learning but different (related) topics are also presented.
+
+- Siraj Raval. [[link]](https://www.youtube.com/channel/UCWN3xxRkmTPmbKwht9FuE5A)
+Siraj regularly presents technical concepts in an easy way with some examples. Videos are usually 5 to 15min long, but he talks really fast, which sometimes requires you to pause or rewind the video to process all he just said. Topics are presented in a very friendly and "Booliwood-ish" way (whatever that means).
+
+- 3Blue1Brown [[link]](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
+*"3blue1brown, by Grant Sanderson, is some combination of math and entertainment, depending on your disposition. The goal is for explanations to be driven by animations and for difficult problems to be made simple with changes in perspective."* The author presents, exceptionaly understandable, mathematical concepts (such as Calculus, Fourier Transorm, etc.) but he also has a series of videos about Deep Learning and delves into various mathematical concepts behind AI and Deep Learning.
+
+- DotCSV (Carlos Santana Vega)) [[link]](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg)
+In Spanish but with English captions. The author has different types of videos: *Data Coffees*, *BITS*, and *AI news* (Noticias IA), where he discusses the latest milestones, curiosities, and news in the field of AI, respectively; *Learning AI* (Aprendiendo Inteligencia Artificial), presents basic AI concepts; *AI Notebooks* (IA Notebooks), teaches while programming "live" some of the previously presented AI concepts. *Highly recommended* even if you don't speak Spanish (just use captions).
+
+
+## Recommended TED talks about AI
 
 - *How computers are learning to be creative* by Blaise Agüera y Arcas. [[video]](https://www.youtube.com/watch?v=uSUOdu_5MPc)
 - *What happens when our computers get smarter than we are?* by Nick Bostrom. [[video]](https://www.youtube.com/watch?v=MnT1xgZgkpk)
 - *Can we build AI without losing control over it?* by Sam Harris. [[video]](https://www.youtube.com/watch?v=8nt3edWLgIg)
 - *How computers learn to recognize objects instantly* by Joseph Redmon (YOLO Team). [[video]](https://www.youtube.com/watch?v=Cgxsv1riJhI)
 - *The incredible inventions of intuitive AI* by Maurice Conti. [[video]](https://www.youtube.com/watch?v=aR5N2Jl8k14)
-
-## Interesting YouTube Channels:
-- Two Minute Papers. [[link]](https://www.youtube.com/user/keeroyz/)
-- DotCSV (in Spanish) [[link]](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg)
 
 # Terminology
 
